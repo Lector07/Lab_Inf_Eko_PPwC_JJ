@@ -29,11 +29,40 @@
 //}
 
 //zad5
-void zamianaZ10Na2(int n) {
-    if (n > 1) {
-        zamianaZ10Na2(n / 2);
+//void zamianaZ10Na2(int n) {
+//    if (n > 1) {
+//        zamianaZ10Na2(n / 2);
+//    }
+//    printf("%d", n % 2);
+//}
+
+//zad6
+//int ciagFibo(int n)
+//{
+//    if (n == 0) {
+//        return 0;
+//    }
+//    else if (n == 1) {
+//        return 1;
+//    }
+//    else if(n > 1){
+//        return ciagFibo(n - 2) + ciagFibo(n - 1);
+//    }
+//}
+
+//zad8
+int F(int x, int n) {
+    int k = 0;
+    if (n == 1) {
+        return x;
     }
-    printf("%d", n % 2);
+    else if (n % 3 == 0) {
+        k = F(x, n / 3);
+        return k*k*k;
+    }
+    else {
+        return x * F(x, n - 1);
+    }
 }
 
 int main() {
@@ -66,14 +95,34 @@ int main() {
     printf("%d", wynik(liczba));*/
 
     //zad5
-    int liczba = 0;
+    /*int liczba = 0;
 
     printf("Podaj liczbe do zamiany: ");
     scanf("%d", &liczba);
 
     printf("Liczba %d w systemie 2 to: ", liczba);
     zamianaZ10Na2(liczba);
-    printf("\n");
+    printf("\n");*/
+
+    //zad 6
+    /*int n;
+    
+    printf("Podaj n: ");
+    scanf("%d", &n);
+
+    printf("Ciag fibonachiego dla podanego n: %d to: %d", n, ciagFibo(n));*/
+
+    //zad8
+    int x;
+    int n;
+
+    printf("Podaj x: \n");
+    scanf("%d", &x);
+
+    printf("Podaj n > 0: \n");
+    scanf("%d", &n);
+
+    printf("Funkcja F(%d;%d) ma wartosc: %d", x, n, F(x, n));
     
     return 0;
 }
