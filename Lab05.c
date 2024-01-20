@@ -77,7 +77,7 @@ int main() {
 	//int* tablica = (int*)malloc(rozmiar * sizeof(int));
 
 	//if (tablica == NULL) {
-	//	printf("B³¹d alokacji pamiêci.\n");
+	//	printf("BÂ³Â¹d alokacji pamiÃªci.\n");
 	//	return 1;  
 	//}
 
@@ -95,8 +95,8 @@ int main() {
 
 	//int* wskmin = 0;
 	//int* wskmax = 0;
-	//wskmin = min;
-	//wskmax = max;
+	//wskmin = &min;
+	//wskmax = &max;
 
 	//srand(time(NULL));
 
